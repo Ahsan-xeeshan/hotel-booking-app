@@ -1,7 +1,21 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./layout/Layout";
+
 function App() {
   return (
     <>
-      <h1 className="bg-red-500 p-5 m-6 text-4xl">HOTEL BOOKING</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Layout>
+                <p>Home Page</p>
+              </Layout>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
